@@ -120,7 +120,7 @@ exists publicly:
 | `Naras/Siribhoovalaya` | `Adhyaya_One_Chakras.xlsx` — a single sheet `Chakra1-1-1` | No (Adhyaya 1) |
 | `mdileep/SiriBhoovalaya` | `SiriBhoovalaya.xlsx` — sheets hold **path matrices** (values 1–729, the bandha traversal order), not manuscript content (1–64) | No (pattern demo) |
 | `LappyG/Bhoovalaya` | `matrix.py` *generates a synthetic placeholder* grid (fills 1–16 into quadrants); not manuscript data | No (toy) |
-| archive.org `bmshri.siribhoovalayaka0000npra...` | A scanned **published Kannada book** (decoded text, Ananta Subbarayaru) | No (plaintext, no grids) |
+| archive.org `bmshri.siribhoovalayaka0000npra...` | A scanned **published Kannada book** (*Siribhoovalaya as seen by K. Ananta Subbarayaru*, comp. N. Prabhavati), 116 pp. Visually it holds **one** numeral chakra grid (p.8 = Chakra 1, the maṅgala, shown as a Chakrabandha worked example) + the full code table (p.9); the rest is commentary/decoded verse | No (only Chakra 1, which we already have) |
 | Anil K. Jain / siri-bhoovalaya.org / KundKund Gyanpeeth | Presentations cite **"85 digitised chakras (Adhyaya 1–8)"** | Referenced but **not published as open data** |
 
 **Conclusion:** every openly-downloadable digitization is Adhyaya/Chapter 1 (essentially
@@ -128,8 +128,25 @@ the same ~9 chakras). The larger "85 chakras" digitization is held by the resear
 and is not downloadable. The only routes to more grids are (a) OCR/transcribe manuscript
 scans or the published book into 729-number grids — the field's real bottleneck — or (b)
 request the data directly from Anil Kumar Jain's group. The archive.org book gives decoded
-*plaintext* for later adhyayas but not the *grids*, so it cannot be used to mechanically
-validate the bandhas (it is the answer, not the puzzle).
+*plaintext* plus a single worked-example grid (Chakra 1) but no later-adhyaya *grids*, so
+it cannot be used to mechanically validate the bandhas on new chapters (it is the answer,
+not the puzzle).
+
+> **Correction to an earlier survey note.** A prior version of this table said the
+> archive.org book had "no grids." That was an OCR artifact — the OCR read only ~217 of the
+> 729 numbers in the dense table, so automated density checks missed it. **Visual
+> inspection of the page images shows the book does contain one numeral grid** (Chakra 1,
+> p.8) and the full code table (p.9). It is still Chapter-1-only, so the conclusion is
+> unchanged, but the "no grids" wording was wrong.
+
+### Primary-source confirmation of the code table
+
+Page 9 of that book prints the number→syllable table and states explicitly: **1–27 =
+vowels (svara), 28–52 = grouped consonants (vargiya vyanjana), 53–60 = ungrouped consonants
+(avargiya vyanjana), 61–64 = special characters.** This (a) matches `decoder/src/script.ts`
+exactly and (b) **vindicates the research claim the verifier had "refuted"** — "vowels
+1–27, consonants 28–60" is in fact correct per this published primary source; it was killed
+in verification only on sourcing grounds, not on substance.
 
 ## Scope limit
 
