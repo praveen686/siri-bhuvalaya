@@ -1,0 +1,272 @@
+{
+  "summary": "Deep research harness — fan-out web searches, fetch sources, adversarially verify claims, synthesize a cited report.",
+  "agentCount": 98,
+  "logs": [
+    "Q: Siri Bhoovalaya (Siri Bhuvalaya) — the ancient Jain numerical-grid manuscript. R…",
+    "Decomposed into 5 angles: broad/primary, bandhas/decoding mechanics, decipherment history / key figures, academic/technical reception & skepticism, computational/digital decoding efforts",
+    "computational/digital decoding efforts: 6 results",
+    "bandhas/decoding mechanics: 6 results",
+    "bandhas/decoding mechanics: 5 novel (1 filtered)",
+    "academic/technical reception & skepticism: 6 results",
+    "academic/technical reception & skepticism: 4 novel (2 filtered)",
+    "decipherment history / key figures: 6 results",
+    "decipherment history / key figures: 1 novel (5 filtered)",
+    "broad/primary: 6 results",
+    "broad/primary: 0 novel (6 filtered)",
+    "Fetched 16 sources → 69 claims → verifying top 25",
+    "\"A single Chakra in Siri-Bhoovalaya is represented …\": 3-0 ✓",
+    "\"The numerical (ank) script encodes phonetic charac…\": 1-2 ✗",
+    "\"Siri-Bhoovalaya uses multiple bandhas (encoding me…\": 3-0 ✓",
+    "\"Dr. S. Srikanta Sastri, after scrutinizing the pub…\": 3-0 ✓",
+    "\"The Siri Bhoovalaya is attributed to Kumudendu, wh…\": 3-0 ✓",
+    "\"Siri Bhoovalaya is an ancient Jain manuscript comp…\": 1-2 ✗",
+    "\"Two bandhas — Chakra Bandha and Navmank Bandha — a…\": 3-0 ✓",
+    "\"The Siri Bhoovalaya encrypts its content using num…\": 3-0 ✓",
+    "\"An open-source software project (mdileep/SiriBhoov…\": 3-0 ✓",
+    "\"After producing Kannada (Halegannada) text from th…\": 2-1 ✓",
+    "\"The paper presents an automated NLP-based model th…\": 2-1 ✓",
+    "\"The bandhas in Siri-Bhoovalaya are fundamentally t…\": 3-0 ✓",
+    "\"The actual decoding implementation in the reposito…\": 3-0 ✓",
+    "\"The Navmank Bandha is a distinct decoding pattern …\": 3-0 ✓",
+    "\"Decipherment is modeled as a computational pipelin…\": 3-0 ✓",
+    "\"A Cakra is defined as a 27x27 matrix of numbers (r…\": 3-0 ✓",
+    "\"KES models the manuscript as two ciphers: a mono-a…\": 3-0 ✓",
+    "\"Anil Kumar Jain presented the Kumudendu Encryption…\": 3-0 ✓",
+    "\"The presentation enumerates eight bandha types: Ca…\": 3-0 ✓",
+    "\"Siri Bhoovalaya is a Jain numerical-grid manuscrip…\": 3-0 ✓",
+    "\"The work consists of 1270 Chakras, each a 27x27 ma…\": 2-1 ✓",
+    "\"A 'Bandha' is a specified scheme for traversing th…\": 3-0 ✓",
+    "\"The manuscript is claimed to encode poetry/verse i…\": 2-1 ✓",
+    "\"In the Chakra-Bandha, all 729 cells of the 27x27 m…\": 3-0 ✓",
+    "\"The Siri Bhoovalaya is attributed to Kumudendu Mun…\": 3-0 ✓",
+    "Verify done: 25 claims → 23 confirmed, 2 killed"
+  ],
+  "result": {
+    "question": "Siri Bhoovalaya (Siri Bhuvalaya) — the ancient Jain numerical-grid manuscript. Research everything: its history and authorship (Kumudendu Muni), the 27x27 chakras and numerical (ank) script, ALL the bandhas / decoding patterns (Chakrabandha, Navmaank/Navmank bandha, Chakra Bandha variants, and any other documented bandhas like diagonal/spiral/Koshtak Chintamani patterns), the claim of encoding 718 languages, decipherment history and key figures (Yellappa Shastri, Karlamangalam Srikantaiah, Pandit Yellappa Shastri, Anil Kumar Jain, Aruhant Mehta), the multilingual layers (Kannada, Prakrit, Sanskrit), scholarly/academic reception and skepticism, and current digital/computational decoding efforts. Emphasis on the bandhas: how each works mathematically and what text each reveals.",
+    "summary": "The Siri Bhoovalaya is a Jain manuscript attributed to the Digambar Jain monk Kumudendu Muni (Deshi Gana / Nandi Sangh lineage, Karnataka), written entirely in Kannada numerals (values 1-64) arranged in 27x27 grids called Chakras (729 cells each, one page of encrypted text) rather than alphabetic script. Content is revealed by Bandhas, fundamentally transposition schemes that linearize the 2D matrix into a string; numbers are then substituted for phonetic characters via the Kumudendu Code Table and assembled into words per the target language grammar, with further interlaced languages (Prakrit, Sanskrit, Tamil, Telugu) extracted from the base Kannada layer through steganography-like predefined patterns, supporting the famous claim of 718 languages (18 major + 700 minor). The best-documented bandhas are Chakra-Bandha (full 729-cell traversal from Row1/Col14 to Row27/Col14, yielding first-Chakra Kannada in Sangatya meter) and Navmaank-Bandh (applied to 9x9 UpChakra sub-matrices across Adhyayas 2-8); these two together are claimed sufficient to decode the entire first volume. Eight named bandhas recur (Cakra, Navmaank, Shreni, Hans, Anu, Mayur, Saras, Padma) with many more said undiscovered. Decipherment ties to Pandit Yellappa Shastri and editor Karlamangalam Srikantaiah (~1950s); dating is disputed (~800 AD vs 15th-16th century), Dr. S. Srikanta Sastri (1953) found no proof of modern forgery, and modern computational efforts include Anil Kumar Jain's KES (Indian Science Congress 2020), a 2024 Springer NLP paper, and open-source repos (aruhant, mdileep).",
+    "findings": [
+      {
+        "claim": "Siri Bhoovalaya is a Jain numerical-grid manuscript attributed to the Digambar Jain monk Kumudendu Muni (Deshi Gana / Nandi Sangh lineage, Karnataka), written entirely in Kannada numerals rather than letters; he claimed to be guru of Amoghavarsha and disciple of Virasena/Jinasena, placing it in a 9th-century Rashtrakuta/Ganga context, though scholars dispute the date (~800 AD to 15th-16th century).",
+        "confidence": "high",
+        "sources": [
+          "https://en.wikipedia.org/wiki/Siribhoovalaya",
+          "https://www.srikanta-sastri.org/scholarly-opinion-on-siribhoovalaya",
+          "https://www.herenow4u.net/index.php?id=136712",
+          "https://link.springer.com/article/10.1007/s11042-024-18527-y"
+        ],
+        "evidence": "Wikipedia attributes the work to Digambar Jain monk Kumudendu. Srikanta-sastri.org: Kumudendu, who says that he was the guru of Amoghavarsha of Manya kheta and a disciple of Virasena and Jinasena of Dhavala. HereNow4U confirms Deshi Gana / Nandi Sangh lineage, Karnataka, numerals-only composition. Springer: composed approximately a millennium ago, encrypted using numerals of the Kannada language. Date placed anywhere between 800 and 1600 CE. Merges claims 3,6,17,22.",
+        "vote": "Combined unanimous (3-0 on each constituent claim)"
+      },
+      {
+        "claim": "The core structure is the Chakra: a 27x27 matrix (729 cells) of integers valued 1-64, each integer mapping to a phonetic character primarily of Kannada origin, representing one page of encrypted text. The work comprises 1270 surviving Chakras (chapter count disputed: 56 vs 26) estimated at ~600,000 Shlokas (~1,400,000 letters).",
+        "confidence": "high",
+        "sources": [
+          "https://www.slideshare.net/slideshow/kes-indian-sceincecongress2020/225425023",
+          "https://www.herenow4u.net/index.php?id=136712",
+          "https://en.wikipedia.org/wiki/Siribhoovalaya",
+          "https://www.slideshare.net/AnilJain6/some-structural-aspects-of-siribhoovalaya"
+        ],
+        "evidence": "KES deck: Cakra is arrangement of numbers (in range 1 to 64) in a matrix of 27 rows and 27 columns, representing one page of encrypted text. HereNow4U/NCILC 2013: 1270 Chakras, each a 27x27 matrix, 56 Chapters, 600000 Shlokas equivalent to 1400000 letters. Anil Jain slideshare proposes a computational dual-matrix (Anka + Pada-Sankhya) per Chakra. Chapter count inconsistent (56 vs 26 vs 59 Adhyayas). Merges claims 0,15,18.",
+        "vote": "Mostly unanimous; claim 18 split 2-1 only on disputed chapter count"
+      },
+      {
+        "claim": "A Bandha is a scheme for traversing the 27x27 matrix and substituting numbers for letters, fundamentally a transposition scheme converting the 2D Chakra into a 1D string of numbers. Eight named bandhas recur: Cakra-Bandha, Navmaank-Bandh, Shreni-Bandha, Hans-Bandha, Anu-Bandha, Mayur-Bandha, Saras-Bandha, Padma-Bandha, with many more said to remain undiscovered.",
+        "confidence": "high",
+        "sources": [
+          "https://www.slideshare.net/AnilJain6/siri-bhoovalaya-from-computer-science-perspective",
+          "https://www.slideshare.net/slideshow/kes-indian-sceincecongress2020/225425023",
+          "https://www.herenow4u.net/index.php?id=136712",
+          "https://en.wikipedia.org/wiki/Siribhoovalaya"
+        ],
+        "evidence": "Anil Jain (CS): Bandhas in Siri-Bhoovalaya basically are Transposition Schemes to convert two-dimensional Chakra into a single dimensional string of numbers. KES deck and HereNow4U list the eight bandhas verbatim with etc. etc. Wikipedia gives a parallel transliteration set (Chakrabandha, Hamsabandha, Varapadmabandha, Sagarabandha, Sarasabandha, Mayurabandha). Only ~3 of 26 chapters decoded supports many more undiscovered. Merges claims 1,10,16,19.",
+        "vote": "Combined unanimous (3-0 on each)"
+      },
+      {
+        "claim": "Chakra-Bandha traverses all 729 cells from Row-1/Column-14 (cell 1) to Row-27/Column-14 (cell 729), yielding first-Chakra Kannada plaintext in Sangatya Chhanda meter. Navmaank-Bandh is a distinct pattern applied from the Second to Eighth Adhyaya, partitioning the 27x27 Cakra into 9x9 UpChakra sub-matrices each traversed recursively like Chakra-Bandh with different tile sequences per Adhyaya. These two together are claimed sufficient to decode the entire first volume (Khand).",
+        "confidence": "high",
+        "sources": [
+          "https://www.herenow4u.net/index.php?id=136712",
+          "https://www.slideshare.net/AnilJain6/siri-bhoovalaya-from-computer-science-perspective",
+          "https://github.com/aruhant/siri-bhoovalaya"
+        ],
+        "evidence": "HereNow4U: Cell 1 is located at Row-1 and Column-14, Cell 2 at Row-27 Column-15, and so on until last Cell 729 at Row-27 Column-14, results in plaintext in Kannada composed in Sangatya Chhanda. Anil Jain (CS): Navmank Bandh is applied from Second Adhyaya to Eighth Adhyaya with different sequence of Tiles; each tile, called UpChakra, is traversed in the same manner as in Chakra Bandh. aruhant README: These two Bandhas are sufficient to decode the entirety of the first volume (Khand). Merges claims 4,11,20.",
+        "vote": "Combined unanimous (3-0 on each)"
+      },
+      {
+        "claim": "Decipherment is modeled as a computational pipeline: (1) transform 2D matrix into a row vector per the Bandha; (2) mono-alphabetic substitution via the Kumudendu Code Table (each phonetic alphabet/Mula Varna assigned integer 1-64); (3) join phonetic alphabets into words per grammar; (4) derive interlaced multilingual content via steganography. KES (ISC 2020) formalizes this as a substitution cipher (KCT) plus a transposition cipher (27x27/729 Bandha Traversal Path Matrix). The 2024 Springer paper automates it with an NLP model.",
+        "confidence": "high",
+        "sources": [
+          "https://www.slideshare.net/AnilJain6/siri-bhoovalaya-from-computer-science-perspective",
+          "https://www.slideshare.net/slideshow/kes-indian-sceincecongress2020/225425023",
+          "https://link.springer.com/article/10.1007/s11042-024-18527-y"
+        ],
+        "evidence": "Anil Jain (CS): Transform 2D matrix into row vector, mono-alphabetic substitution using Kumudendu Code Table, join alphabets to form words per grammar rules (Kannada), multilingual contents are interlaced and extracted as per corresponding schemes (steganography). KES: two ciphers, KCT (integers 1-64) plus Bandha Traversal Path Matrix (27x27/729 integers). Springer abstract: automate the conversion of Kannada numerals into phonetic alphabets, NLP techniques to form coherent words adhering to linguistic and grammatical structures of the target language. Merges claims 7,12,13,14.",
+        "vote": "Mostly unanimous; claim 7 split 2-1"
+      },
+      {
+        "claim": "The manuscript is multilayered/multilingual: after producing the base Kannada (Halegannada) layer, predefined positional/directional patterns (antarsahitya interweaving) extract Prakrit, Sanskrit, Tamil, Telugu, Apabhramsha, Pali, etc., supporting the famous claim of encoding verse in 718 languages/dialects (18 major + 700 minor, in nearly 18 scripts).",
+        "confidence": "medium",
+        "sources": [
+          "https://github.com/aruhant/siri-bhoovalaya",
+          "https://www.herenow4u.net/index.php?id=136712",
+          "https://en.wikipedia.org/wiki/Siribhoovalaya",
+          "https://link.springer.com/article/10.1007/s11042-024-18527-y"
+        ],
+        "evidence": "aruhant README: From the resultant Kannada text, specific predefined patterns allow extraction of other languages, including Prakrit, Sanskrit, Tamil, Telugu, and more. Documented mechanism: text read top-to-bottom yields Prakrit; from 9th letter downwards Sanskrit; vertically from 17th letter Telugu. HereNow4U: languages include Prakrita, Samskrit, Telugu, Tamil, Apabhramsha and Pali, totaling 718 dialects. Wikipedia: nearly 18 scripts and over 700 languages. Merges claims 5,21 (language portion); both split 2-1 but stand as hedged claims.",
+        "vote": "Split: claim 5 2-1, claim 21 2-1; stand as hedged claims"
+      },
+      {
+        "claim": "Decipherment history: the sole surviving copy was brought to light by Pandit Yellappa Shastri via decipherment around the 1950s; Karlamangalam Srikantaiah edited the first edition (Vol. 1 1953, Vol. 2 1955). Independent scholar Dr. S. Srikanta Sastri (1953) found no evidence in the published portion dating it later than the 9th century A.D. and no proof of deliberate modern forgery, while flagging the seemingly modern form of Kannada as an anomaly.",
+        "confidence": "high",
+        "sources": [
+          "https://www.srikanta-sastri.org/scholarly-opinion-on-siribhoovalaya",
+          "https://www.herenow4u.net/index.php?id=136712",
+          "https://en.wikipedia.org/wiki/Siribhoovalaya"
+        ],
+        "evidence": "HereNow4U: the only remaining copy was brought to light by Pandit Yellapa Shastri through his tireless efforts in around 1950s. Srikanta-sastri.org: I have scrutinised carefully for any evidence of a later date than 9th century A.D. but in the published portion nothing has been discovered, and there is no proof of deliberate forgery by any modern author. Wikipedia names Karlamangalam Srikantaiah as first-edition editor. Merges claims 2,21 (provenance portion).",
+        "vote": "Combined unanimous on claim 2 (3-0); claim 21 split 2-1"
+      },
+      {
+        "claim": "Current digital/computational decoding efforts exist but are partial. Anil Kumar Jain presented the Kumudendu Encryption System (KES) at the 107th Indian Science Congress (Bengaluru, Jan 6, 2020), framing the work as a cryptographic system. A peer-reviewed Springer paper (2024) presents an automated NLP decoder. The aruhant/siri-bhoovalaya repo implements Chakra and Navmank bandhas in C++/TypeScript/Python; the mdileep/SiriBhoovalaya C# repo frames it as visual-pattern encryption but its library and sample app are unfinished stubs (only a basic Excel file works).",
+        "confidence": "high",
+        "sources": [
+          "https://www.slideshare.net/slideshow/kes-indian-sceincecongress2020/225425023",
+          "https://link.springer.com/article/10.1007/s11042-024-18527-y",
+          "https://github.com/aruhant/siri-bhoovalaya",
+          "https://github.com/mdileep/SiriBhoovalaya"
+        ],
+        "evidence": "KES deck: Presentation on 6th January 2020 at 107th Indian Science Congress, Bengaluru, presenter Er. Anil Kumar Jain. aruhant repo: TypeScript 67.3% / Python 20.5% / C++ 11.4%, Implementation: C++, TS, and Python. mdileep repo (100% C#): SiriBhoovalaya.xlsx demonstrates how this technique actually works in very basic way; Library and Sample Application are stubs. Springer abstract confirms the automated NLP model. Decipherment overall remains incomplete (~3 of 26 chapters) and largely manual. Merges claims 4,8,9,13.",
+        "vote": "Combined unanimous (3-0 on each)"
+      }
+    ],
+    "caveats": "Dating is genuinely unsettled: traditional ~800 AD (Srikantaiah; not contradicted by Srikanta Sastri 1953) vs Dr. Venkatachala Sastry's 15th-16th century (~1550-1600); the seemingly modern form of Kannada anomaly is unexplained. The 718-languages claim and the decode-the-entire-first-volume sufficiency are proponent self-claims, not independently peer-validated; overall decipherment is incomplete (~3 of 26 chapters) and still largely manual even per the 2024 Springer paper. Several key sources are author self-uploads (Anil Kumar Jain SlideShare decks, KES) or project READMEs, authoritative for describing their own proposed models and terminology but not for proving the cryptographic claims are objectively true. Structural figures (1270 Chakras, ~600,000 shlokas, integers 1-64) are well-corroborated, but chapter count is inconsistent (56 vs 26 vs 59). Per-bandha exact mathematics beyond Chakra-Bandha (Row1/Col14 traversal) and Navmaank-Bandh (9x9 UpChakra) are not individually detailed in the verified sources; the other named bandhas (Hans, Anu, Mayur, Saras, Padma, Shreni) are documented by name and as traversal/substitution schemes but without per-pattern coordinate-level mechanics. Two claims were refuted in verification: a specific vowel-1-27/consonant-28-60 mapping, and a broad integrates-knowledge-from-multiple-sciences assertion. Many cited sources are secondary (HereNow4U, Wikipedia) or proponent-authored; no deep skeptical academic source was mined beyond Wikipedia's noted reservations.",
+    "openQuestions": [
+      "What are the precise coordinate-level traversal mechanics of the remaining named bandhas (Shreni, Hans/Hamsa, Anu, Mayur, Saras, Padma) and exactly what text or language does each reveal?",
+      "Why does the manuscript exhibit a seemingly modern form of Kannada if genuinely 9th-century, and can paleography or independent dating resolve the 800 AD vs 15th-16th century dispute?",
+      "Is the 718-languages claim empirically reproducible end-to-end, or does it rest on selective decoding of the ~3 decoded chapters?",
+      "What is the relationship and lineage among the named figures (Yellappa Shastri, Karlamangalam Srikantaiah, Dharanendra Pandit, Anil Kumar Jain, Aruhant Mehta), and have the modern computational workers produced cross-validated results or divergent methods?"
+    ],
+    "refuted": [
+      {
+        "claim": "The numerical (ank) script encodes phonetic characters as numeric values, with vowels mapped to 1-27 and consonants mapped to 28-60, using transposition, permutation and substitution.",
+        "vote": "1-2",
+        "source": "https://www.slideshare.net/AnilJain6/some-structural-aspects-of-siribhoovalaya"
+      },
+      {
+        "claim": "Siri Bhoovalaya is an ancient Jain manuscript composed entirely in a numerical script, whose numbers correspond to syllables across 718 languages and integrate knowledge from multiple sciences and cultural texts.",
+        "vote": "1-2",
+        "source": "https://github.com/aruhant/siri-bhoovalaya"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.slideshare.net/AnilJain6/some-structural-aspects-of-siribhoovalaya",
+        "quality": "primary",
+        "angle": "bandhas/decoding mechanics",
+        "claimCount": 5
+      },
+      {
+        "url": "https://www.herenow4u.net/index.php?id=136712",
+        "quality": "secondary",
+        "angle": "bandhas/decoding mechanics",
+        "claimCount": 5
+      },
+      {
+        "url": "https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=f06abff3bd39775654b20e751d95e40dedd51111",
+        "quality": "unreliable",
+        "angle": "bandhas/decoding mechanics",
+        "claimCount": 0
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Siribhoovalaya",
+        "quality": "secondary",
+        "angle": "bandhas/decoding mechanics",
+        "claimCount": 5
+      },
+      {
+        "url": "https://www.slideshare.net/slideshow/siri-bhoovalaya-from-computer-science-perspective/66678546",
+        "quality": "secondary",
+        "angle": "bandhas/decoding mechanics",
+        "claimCount": 5
+      },
+      {
+        "url": "http://siri-bhoovalaya.org/introduction-to-siribhoovalaya/",
+        "quality": "blog",
+        "angle": "decipherment history / key figures",
+        "claimCount": 5
+      },
+      {
+        "url": "https://www.srikanta-sastri.org/scholarly-opinion-on-siribhoovalaya",
+        "quality": "primary",
+        "angle": "academic/technical reception & skepticism",
+        "claimCount": 5
+      },
+      {
+        "url": "https://brickmag.com/a-most-ingenious-work-of-literature/",
+        "quality": "secondary",
+        "angle": "academic/technical reception & skepticism",
+        "claimCount": 5
+      },
+      {
+        "url": "https://www.herenow4u.net/index.php?id=136717",
+        "quality": "secondary",
+        "angle": "academic/technical reception & skepticism",
+        "claimCount": 5
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Kumudendu_Muni",
+        "quality": "secondary",
+        "angle": "academic/technical reception & skepticism",
+        "claimCount": 5
+      },
+      {
+        "url": "https://github.com/aruhant/siri-bhoovalaya",
+        "quality": "primary",
+        "angle": "computational/digital decoding efforts",
+        "claimCount": 5
+      },
+      {
+        "url": "https://link.springer.com/article/10.1007/s11042-024-18527-y",
+        "quality": "primary",
+        "angle": "computational/digital decoding efforts",
+        "claimCount": 4
+      },
+      {
+        "url": "https://github.com/mdileep/SiriBhoovalaya",
+        "quality": "primary",
+        "angle": "computational/digital decoding efforts",
+        "claimCount": 5
+      },
+      {
+        "url": "https://www.slideshare.net/AnilJain6/siri-bhoovalaya-from-computer-science-perspective",
+        "quality": "primary",
+        "angle": "computational/digital decoding efforts",
+        "claimCount": 5
+      },
+      {
+        "url": "https://www.slideshare.net/slideshow/kes-indian-sceincecongress2020/225425023",
+        "quality": "primary",
+        "angle": "computational/digital decoding efforts",
+        "claimCount": 5
+      },
+      {
+        "url": "https://citeseerx.ist.psu.edu/document?doi=f06abff3bd39775654b20e751d95e40dedd51111&repid=rep1&type=pdf",
+        "quality": "unreliable",
+        "angle": "computational/digital decoding efforts",
+        "claimCount": 0
+      }
+    ],
+    "stats": {
+      "angles": 5,
+      "sourcesFetched": 16,
+      "claimsExtracted": 69,
+      "claimsVerified": 25,
+      "confirmed": 23,
+      "killed": 2,
+      "afterSynthesis": 8,
+      "urlDupes": 12,
+      "budgetDropped": 2,
+      "agentCalls": 98
+    }
+  }
+}
