@@ -60,30 +60,76 @@ The literature describes Navmank-Bandh as: partition the 27×27 Chakra into **9�
 "UpChakra" sub-matrices**, traverse each with the same walk as the Chakra-Bandh, visiting
 tiles in a per-Adhyaya sequence (Adhyayas 2–8).
 
-While implementing this (`Bandha.navmankBandha` in `decoder/src/bandha.ts`), a prerequisite
-bug was found and fixed: the existing `fromKoshtakChintamani` had the **wrong collision
-rule** — its own comment said "move one row down" but the code did `row+2, col-1`, so it
-did *not* reproduce the manuscript's Chakra-Bandha. The correct rule is the standard
-**Siamese / De-la-Loubère** method: step `(up=1, right=1)` each cell, and on collision drop
-straight down one row (`row+1`, same col). With `(size=27, up=1, right=1)` this now
-reproduces `data/chakra_bandha.txt` **729/729**.
+The walk underlying both bandhas is the **Siamese / De-la-Loubère** method: step
+`(up=1, right=1)` each cell, and on collision drop straight down one row (`row+1`, same
+col). With `(size=27, up=1, right=1)` this reproduces `data/chakra_bandha.txt` **729/729**;
+Navmank is the same walk at `size=9` applied to each 9×9 tile.
 
-Navmank is then the same Siamese walk at `size=9` applied to each tile. Verified via a
-vitest suite (`decoder/__tests__/bandha.unit.test.ts`, 7 tests, all green):
+> **Correction (integrity note).** An earlier version of this file, and the first commit
+> message, claimed the existing `fromKoshtakChintamani` had a "wrong collision rule" that
+> was "fixed." **That claim was false.** The original code computed `row+2, col-1` *from
+> the already-moved cell*, which nets to `row+1, col` from the current cell — i.e. it was
+> already the correct Siamese rule and already reproduced the bandha 729/729. The error was
+> in a throwaway diagnostic script (it read the pre-move `row` instead of the moved value),
+> not in the repo. What was actually committed to `bandha.ts` is a **behaviour-preserving
+> refactor**: identical output, but an O(1) `Set` membership test instead of an O(n²)
+> `Array.find`, plus clearer naming. Not a bug fix.
+
+The implementation is verified via a vitest suite
+(`decoder/__tests__/bandha.unit.test.ts`, 7 tests, all green):
 
 - Chakra-Bandha == committed file, 729/729; starts at `(0,13)`; bijection over 729 cells.
 - Navmank-Bandh is a valid **bijection over all 729 cells**, all in range.
 - Each Navmank tile has the **same shape as a 9×9 Chakra-Bandha**.
 - Navmank stays a bijection under an arbitrary tile permutation, and honours `tileOrder`.
 
-**Validation limit (honest):** Navmank's *correctness against known plaintext cannot be
-checked here* — it is documented for Adhyayas 2–8, but the repo contains only Chapter 1
-data. So the implementation is verified to be a faithful, valid permutation matching the
-documented mechanism, **not** verified to reproduce attested Adhyaya 2–8 verses. The
-per-Adhyaya tile sequences are also unattested in public sources, so `tileOrder` is
-parameterised (default row-major) rather than hard-coded. Running Navmank on Chapter 1
-(which is Chakra-Bandha territory) yields jumbled syllables, as expected. Closing this gap
+### Cross-check against the original author's reference (strong)
+
+The deprecated C++ (`archive - deprecated version/c++/chakra_navmank_bandha.cpp`) hard-codes
+the author's own path matrices. Converting those matrices to coordinate sequences:
+
+- The C++ **27×27** Chakra-Bandha matrix == the committed `chakra_bandha.txt` == this repo's
+  `siamese(27)` — all three identical, 729/729.
+- The C++ **9×9** Navmank matrix == this repo's `siamese(9)` (the per-tile walk in
+  `navmankBandha`) — identical cell-for-cell, all 81 cells.
+
+So the new `navmankBandha` is validated **against the original author's reference
+implementation**, not merely against an internal prototype. The C++ also takes the tile
+routing as a runtime `order` vector — confirming that parameterising `tileOrder` (rather
+than hard-coding it) is faithful to the original design. (Convention nuance: the C++ maps
+*spatial tile → output block* via `order[sub_chakraN]`, whereas `navmankBandha` reads
+*output block → spatial tile* via `order[k]`; the two coincide for the default identity
+order and are inverses otherwise — a labelling choice, not a correctness difference.)
+
+**Validation limit (still honest):** none of this checks Navmank against *known Adhyaya 2–8
+plaintext*, because the repo contains only Chapter 1 data and the per-Adhyaya tile
+sequences are unattested in public sources. The implementation is verified to (a) be a
+valid bijection and (b) match the documented mechanism and the original author's reference
+matrices — **not** to reproduce attested Adhyaya 2–8 verses. Running Navmank on Chapter 1
+(Chakra-Bandha territory) yields jumbled syllables, as expected. Closing that last gap
 requires transcribed Chapter 2–8 grids.
+
+## 6. Data-availability survey for Chapters/Adhyayas 2–8 (2026-06)
+
+A search for openly-downloadable numeric grids beyond Chapter 1 came up **empty**. What
+exists publicly:
+
+| Source | What it actually contains | Usable ch. 2–8 grids? |
+|---|---|---|
+| `aruhant/siri-bhoovalaya` | Chapter 1, 9 chakras (this repo) | No |
+| `Naras/Siribhoovalaya` | `Adhyaya_One_Chakras.xlsx` — a single sheet `Chakra1-1-1` | No (Adhyaya 1) |
+| `mdileep/SiriBhoovalaya` | `SiriBhoovalaya.xlsx` — sheets hold **path matrices** (values 1–729, the bandha traversal order), not manuscript content (1–64) | No (pattern demo) |
+| `LappyG/Bhoovalaya` | `matrix.py` *generates a synthetic placeholder* grid (fills 1–16 into quadrants); not manuscript data | No (toy) |
+| archive.org `bmshri.siribhoovalayaka0000npra...` | A scanned **published Kannada book** (decoded text, Ananta Subbarayaru) | No (plaintext, no grids) |
+| Anil K. Jain / siri-bhoovalaya.org / KundKund Gyanpeeth | Presentations cite **"85 digitised chakras (Adhyaya 1–8)"** | Referenced but **not published as open data** |
+
+**Conclusion:** every openly-downloadable digitization is Adhyaya/Chapter 1 (essentially
+the same ~9 chakras). The larger "85 chakras" digitization is held by the research group
+and is not downloadable. The only routes to more grids are (a) OCR/transcribe manuscript
+scans or the published book into 729-number grids — the field's real bottleneck — or (b)
+request the data directly from Anil Kumar Jain's group. The archive.org book gives decoded
+*plaintext* for later adhyayas but not the *grids*, so it cannot be used to mechanically
+validate the bandhas (it is the answer, not the puzzle).
 
 ## Scope limit
 
