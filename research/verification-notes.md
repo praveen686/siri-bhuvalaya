@@ -54,6 +54,37 @@ visarga 62, etc.) — consistent for both `kannada_script` and `devanagari_scrip
 why the refuted published claim ("vowels 1–27, consonants 28–60") is *substantively*
 correct even though the verifier killed its over-precise wording on sourcing grounds.
 
+## 5. Navmank-Bandh implemented and structurally verified
+
+The literature describes Navmank-Bandh as: partition the 27×27 Chakra into **9×9
+"UpChakra" sub-matrices**, traverse each with the same walk as the Chakra-Bandh, visiting
+tiles in a per-Adhyaya sequence (Adhyayas 2–8).
+
+While implementing this (`Bandha.navmankBandha` in `decoder/src/bandha.ts`), a prerequisite
+bug was found and fixed: the existing `fromKoshtakChintamani` had the **wrong collision
+rule** — its own comment said "move one row down" but the code did `row+2, col-1`, so it
+did *not* reproduce the manuscript's Chakra-Bandha. The correct rule is the standard
+**Siamese / De-la-Loubère** method: step `(up=1, right=1)` each cell, and on collision drop
+straight down one row (`row+1`, same col). With `(size=27, up=1, right=1)` this now
+reproduces `data/chakra_bandha.txt` **729/729**.
+
+Navmank is then the same Siamese walk at `size=9` applied to each tile. Verified via a
+vitest suite (`decoder/__tests__/bandha.unit.test.ts`, 7 tests, all green):
+
+- Chakra-Bandha == committed file, 729/729; starts at `(0,13)`; bijection over 729 cells.
+- Navmank-Bandh is a valid **bijection over all 729 cells**, all in range.
+- Each Navmank tile has the **same shape as a 9×9 Chakra-Bandha**.
+- Navmank stays a bijection under an arbitrary tile permutation, and honours `tileOrder`.
+
+**Validation limit (honest):** Navmank's *correctness against known plaintext cannot be
+checked here* — it is documented for Adhyayas 2–8, but the repo contains only Chapter 1
+data. So the implementation is verified to be a faithful, valid permutation matching the
+documented mechanism, **not** verified to reproduce attested Adhyaya 2–8 verses. The
+per-Adhyaya tile sequences are also unattested in public sources, so `tileOrder` is
+parameterised (default row-major) rather than hard-coded. Running Navmank on Chapter 1
+(which is Chakra-Bandha territory) yields jumbled syllables, as expected. Closing this gap
+requires transcribed Chapter 2–8 grids.
+
 ## Scope limit
 
 "Decoding the rest of the manuscript" is bounded by **input**, not algorithm. The repo
