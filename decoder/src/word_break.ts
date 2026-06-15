@@ -168,7 +168,6 @@ private _segment(word: Word, upper_limit_length = Infinity): Word[] {
     while (end > start + 1) {
         const trimmedCandidate = word.slice(start, end - 1);
         const trimmedCost = this.superficialCheckCost(trimmedCandidate);
-        console.log(`${kannada_script.wordToScript(word)} has been trimmed to ${kannada_script.wordToScript(trimmedCandidate)}`);
         Logger.debug(`Old cost=${cost}, new cost=${trimmedCost}`);
         if (trimmedCost <= cost) {
         cost = trimmedCost;
@@ -195,7 +194,6 @@ private _segment(word: Word, upper_limit_length = Infinity): Word[] {
     
     // Get our best refined match
     const bestMatchWord = word.slice(start, end);
-    console.log(`bestWindow.start = ${bestWindow.start}, bestWindow.end = ${bestWindow.end}`);
     // Recursively segment left and right parts
     const leftSegments = start > 0 ? 
         this._segment(word.slice(0, start), bestWindow.end - bestWindow.start) : [];
